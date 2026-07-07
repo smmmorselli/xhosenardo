@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhosenardo | Linktree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Sfondo scuro con immagine in opacità (Parallasse/Overlay) */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Sostituisci con l'URL del tuo sfondo scuro */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Foto Profilo Circolare con bordo */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Nome in stile Gotico */
+        .title {
+            font-family: 'Cinzel', serif; /* Simile allo stile gotico dell'immagine */
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-transform: lowercase;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #b3b3b3;
+            margin-bottom: 35px;
+            font-weight: 400;
+        }
+
+        /* Contenitore dei bottoni */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* Bottone con Sfumatura Specchiata (Glow/Glossy lucido) */
+        .link-card {
+            width: 100%;
+            background: linear-gradient(180deg, rgba(40, 40, 40, 0.6) 0%, rgba(15, 15, 15, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.4);
+            background: linear-gradient(180deg, rgba(60, 60, 60, 0.7) 0%, rgba(25, 25, 25, 0.9) 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Icone all'interno dei bottoni */
+        .link-card i {
+            font-size: 1.4rem;
+            margin-right: 20px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        /* Colore icone specifiche (opzionale, per replicare i loghi originali) */
+        .fa-instagram { color: #e1306c; }
+        .fa-youtube { color: #ff0000; }
+        .fa-spotify { color: #1ed760; }
+
+        /* Icone Social in Basso (Footer) */
+        .social-footer {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .social-footer a {
+            color: #fff;
+            font-size: 1.3rem;
+            transition: opacity 0.2s;
+            opacity: 0.7;
+        }
+
+        .social-footer a:hover {
+            opacity: 1;
+        }
+
+        /* Testo di Copyright in fondo */
+        .footer-text {
+            font-size: 0.75rem;
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+
+        <h1 class="title">xhosenardo</h1>
+        <p class="subtitle">GOD XHOSEN</p>
+
+        <div class="links-container">
+            <a href="https://tiktok.com" target="_blank" class="link-card">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+
+            <a href="https://instagram.com" target="_blank" class="link-card">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://youtube.com" target="_blank" class="link-card">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://spotify.com" target="_blank" class="link-card">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </a>
+        </div>
+
+        <div class="social-footer">
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+
+        <div class="footer-text">
+            <p>&copy; 2026 xhosenardo. All rights reserved.</p>
+            <p>Stay tuned.</p>
+        </div>
+    </div>
+
+</body>
+</html>
